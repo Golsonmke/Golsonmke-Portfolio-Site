@@ -138,107 +138,87 @@
   <h2 class="text-3xl font-bold mb-8 text-blue-400 text-center">Certifications</h2>
 
   <!-- Certifications Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" x-data="{ visible: false }" x-intersect:enter="visible = true">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     
     <!-- CompTIA PenTest+ -->
-    <a href="file:images/logos/PenTest+-png.png" target="_blank" 
-       class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center opacity-0"
-       :class="visible ? 'opacity-100 translate-y-0' : 'translate-y-6'" 
-       style="transition: all 300ms ease 0ms">
-      <img src="images/certs/CompTIA PenTest+ ce certificate.pdf" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
+      <img src="images/logos/PenTest+-png.png" alt="CompTIA PenTest+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA PenTest+</p>
       <span class="text-gray-400 text-sm">(2025)</span>
-    </a>
+      <a href="images/certs/CompTIA PenTest+ ce certificate.pdf" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+    </div>
 
     <!-- CompTIA TestOut: Ethical Hacker Pro -->
-    <a href="images/ethicalhackerpro.jpg" target="_blank" 
-       class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center opacity-0"
-       :class="visible ? 'opacity-100 translate-y-0' : 'translate-y-6'" 
-       style="transition: all 300ms ease 100ms">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
       <img src="images/logos/comptia.png" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA TestOut: Ethical Hacker Pro</p>
       <span class="text-gray-400 text-sm">(2024)</span>
-    </a>
+      <a href="images/ethicalhackerpro.jpg" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+    </div>
 
     <!-- CompTIA CySA+ -->
-    <a href="images/cysa.jpg" target="_blank" 
-       class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center opacity-0"
-       :class="visible ? 'opacity-100 translate-y-0' : 'translate-y-6'" 
-       style="transition: all 300ms ease 200ms">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
       <img src="images/logos/comptia.png" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA CySA+</p>
       <span class="text-gray-400 text-sm">(2025)</span>
-    </a>
+      <a href="images/cysa.jpg" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+    </div>
 
     <!-- CompTIA TestOut: Server Pro 2016 Networking -->
-    <a href="images/logos/ServerPro2016 Networking.png" target="_blank"
-       class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center opacity-0"
-       :class="visible ? 'opacity-100 translate-y-0' : 'translate-y-6'" 
-       style="transition: all 300ms ease 300ms">
-      <img src="images/logos/ServerPro2016 Networking.png" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
+      <img src="images/logos/ServerPro2016 Networking.png" alt="Server Pro 2016 Networking Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA TestOut: Server Pro 2016 Networking</p>
       <span class="text-gray-400 text-sm">(2023)</span>
-    </a>
+      <a href="images/certs/ServerPro2016 Networking.png" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+    </div>
 
     <!-- CompTIA Security+ -->
-    <a href="images/logos/ServerPro2016 Networking.png" target="_blank"
-       class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center opacity-0"
-       :class="visible ? 'opacity-100 translate-y-0' : 'translate-y-6'" 
-       style="transition: all 300ms ease 400ms">
-      <img src= "images/logos/ServerPro2016 Networking.png" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
+      <img src="images/logos/comptia.png" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA Security+</p>
       <span class="text-gray-400 text-sm">(2024)</span>
-    </a>
+      <a href="images/securityplus.jpg" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+    </div>
 
     <!-- CCNA: Introduction to Networks -->
-    <a href="images/ccna-intro.jpg" target="_blank" 
-       class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center opacity-0"
-       :class="visible ? 'opacity-100 translate-y-0' : 'translate-y-6'" 
-       style="transition: all 300ms ease 500ms">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
       <img src="images/logos/cisco.png" alt="Cisco Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CCNA: Introduction to Networks</p>
       <span class="text-gray-400 text-sm">(2023)</span>
-    </a>
+      <a href="images/ccna-intro.jpg" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+    </div>
 
     <!-- CompTIA Network+ -->
-    <a href="images/networkplus.jpg" target="_blank" 
-       class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center opacity-0"
-       :class="visible ? 'opacity-100 translate-y-0' : 'translate-y-6'" 
-       style="transition: all 300ms ease 600ms">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
       <img src="images/logos/comptia.png" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA Network+</p>
       <span class="text-gray-400 text-sm">(2024)</span>
-    </a>
+      <a href="images/networkplus.jpg" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+    </div>
 
     <!-- CompTIA A+ -->
-    <a href="images/aplus.jpg" target="_blank" 
-       class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center opacity-0"
-       :class="visible ? 'opacity-100 translate-y-0' : 'translate-y-6'" 
-       style="transition: all 300ms ease 700ms">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
       <img src="images/logos/comptia.png" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA A+</p>
       <span class="text-gray-400 text-sm">(2023)</span>
-    </a>
+      <a href="images/aplus.jpg" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+    </div>
 
     <!-- CCNA: Switching, Routing, and Wireless Essentials -->
-    <a href="images/ccna-routing.jpg" target="_blank" 
-       class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center opacity-0"
-       :class="visible ? 'opacity-100 translate-y-0' : 'translate-y-6'" 
-       style="transition: all 300ms ease 800ms">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
       <img src="images/logos/cisco.png" alt="Cisco Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CCNA: Switching, Routing, and Wireless Essentials</p>
       <span class="text-gray-400 text-sm">(2023)</span>
-    </a>
+      <a href="images/ccna-routing.jpg" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+    </div>
 
     <!-- CVSS v4.0 -->
-    <a href="images/cvss-v4.jpg" target="_blank" 
-       class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center opacity-0"
-       :class="visible ? 'opacity-100 translate-y-0' : 'translate-y-6'" 
-       style="transition: all 300ms ease 900ms">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
       <img src="images/logos/cvss.png" alt="CVSS Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CVSS v4.0 - Common Vulnerability Scoring System</p>
       <span class="text-gray-400 text-sm">(2025)</span>
-    </a>
+      <a href="images/cvss-v4.jpg" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+    </div>
 
   </div>
 </section>

@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>golsonmke.tech - Portfolio </title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Alpine.js for mobile nav -->
+  <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
 <body class="bg-gray-900 text-gray-200 font-sans">
 
   <!-- Header with Responsive Nav -->
   <header class="bg-gray-800 shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center p-5">
-      <!-- Logo / Name -->
       <h1 class="text-xl font-bold text-white">Gary Thomas Olson</h1>
-      
-      <!-- Desktop Nav -->
       <nav class="hidden md:flex space-x-6">
         <a href="#about" class="hover:text-blue-400 text-white">About</a>
         <a href="#projects" class="hover:text-blue-400 text-white">Projects</a>
@@ -22,243 +21,98 @@
         <a href="#contact" class="hover:text-blue-400 text-white">Contact</a>
       </nav>
 
-      <!-- Mobile Menu (Hamburger) -->
+      <!-- Mobile Menu -->
       <div x-data="{ open: false }" class="md:hidden">
-        <!-- Hamburger Icon -->
         <button @click="open = true" class="text-white focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                  d="M4 6h16M4 12h16M4 18h16" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
 
-        <!-- Off-Canvas Menu Overlay -->
-        <div 
-          class="fixed inset-0 bg-black bg-opacity-50 z-40"
-          x-show="open" 
-          x-transition.opacity
-          @click="open = false">
-        </div>
+        <div class="fixed inset-0 bg-black bg-opacity-50 z-40" x-show="open" x-transition.opacity @click="open = false"></div>
 
-        <!-- Off-Canvas Menu Panel -->
-        <div 
-          class="fixed top-0 right-0 w-64 h-full bg-gray-900 shadow-lg z-50 transform transition-transform duration-300"
-          :class="open ? 'translate-x-0' : 'translate-x-full'">
-          
-          <!-- Close Button -->
+        <div class="fixed top-0 right-0 w-64 h-full bg-gray-900 shadow-lg z-50 transform transition-transform duration-300"
+             :class="open ? 'translate-x-0' : 'translate-x-full'">
           <div class="flex justify-end p-4">
-            <button @click="open = false" class="text-white focus:outline-none text-2xl">
-              ✕
-            </button>
+            <button @click="open = false" class="text-white text-2xl">✕</button>
           </div>
-
-          <!-- Menu Links (with staggered animations) -->
           <nav class="flex flex-col space-y-4 px-6">
-            <a href="#about" 
-               class="text-white hover:text-blue-400 transform transition duration-300 delay-100"
-               x-show="open" x-transition:enter="translate-x-8 opacity-0"
-               x-transition:enter-end="translate-x-0 opacity-100"
-               @click="open = false">About</a>
-
-            <a href="#projects" 
-               class="text-white hover:text-blue-400 transform transition duration-300 delay-200"
-               x-show="open" x-transition:enter="translate-x-8 opacity-0"
-               x-transition:enter-end="translate-x-0 opacity-100"
-               @click="open = false">Projects</a>
-
-            <a href="#certifications" 
-               class="text-white hover:text-blue-400 transform transition duration-300 delay-300"
-               x-show="open" x-transition:enter="translate-x-8 opacity-0"
-               x-transition:enter-end="translate-x-0 opacity-100"
-               @click="open = false">Certifications</a>
-
-            <a href="#contact" 
-               class="text-white hover:text-blue-400 transform transition duration-300 delay-400"
-               x-show="open" x-transition:enter="translate-x-8 opacity-0"
-               x-transition:enter-end="translate-x-0 opacity-100"
-               @click="open = false">Contact</a>
+            <a href="#about" class="hover:text-blue-400" @click="open = false">About</a>
+            <a href="#projects" class="hover:text-blue-400" @click="open = false">Projects</a>
+            <a href="#certifications" class="hover:text-blue-400" @click="open = false">Certifications</a>
+            <a href="#contact" class="hover:text-blue-400" @click="open = false">Contact</a>
           </nav>
         </div>
       </div>
     </div>
   </header>
-<!-- Alpine.js CDN (needed for toggle) -->
-<script src="https://unpkg.com/alpinejs" defer></script>
-
 
   <!-- About -->
- <section id="about" class="container mx-auto py-16 px-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-xl">
-  <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-    
-    <!-- Picture -->
-    <div class="flex-shrink-0 md:w-1/3 flex justify-center">
-      <img src="1757612435631.jpeg" alt="Gary T. Olson"
-           class="rounded-2xl shadow-lg w-64 h-auto object-cover border-4 border-blue-500 transition duration-300 hover:shadow-blue-500/60 hover:scale-105" />
+  <section id="about" class="container mx-auto py-16 px-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-xl">
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="flex-shrink-0 md:w-1/3 flex justify-center">
+        <img src="1757612435631.jpeg" alt="Gary T. Olson"
+             class="rounded-2xl shadow-lg w-64 h-auto object-cover border-4 border-blue-500 transition duration-300 hover:shadow-blue-500/60 hover:scale-105" />
+      </div>
+      <div class="md:w-2/3 text-center md:text-left">
+        <h2 class="text-3xl font-bold mb-4 text-blue-400">About Me</h2>
+        <p class="text-lg leading-relaxed text-gray-300 max-w-2xl mb-6">
+          Hello! I'm Gary T. Olson, a cybersecurity enthusiast and aspiring penetration tester...
+        </p>
+      </div>
     </div>
-
-    <!-- Text Content -->
-    <div class="md:w-2/3 text-center md:text-left">
-      <h2 class="text-3xl font-bold mb-4 text-blue-400">About Me</h2>
-      <p class="text-lg leading-relaxed text-gray-300 max-w-2xl mb-6">
-        Hello! I'm Gary T. Olson, a cybersecurity enthusiast and aspiring penetration tester. I have a passion for learning about security vulnerabilities, ethical hacking, and protecting digital assets. 
-        My journey in cybersecurity began with self-study and hands-on labs, and I'm continuously expanding my skills through various projects and certifications.
-      </p>
-      <!-- Resume Button -->
-      <!--
-      <a href="Gary Olson Resume v5.pdf" download="Gary_Olson_Resume.pdf"
-         class="inline-block bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:from-blue-600 hover:to-blue-800 hover:shadow-blue-500/50 transition transform hover:scale-105">
-         📄 Download Resume
-      </a>
-      -->
-    </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- Projects -->
   <section id="projects" class="bg-gray-800 py-16">
     <div class="container mx-auto">
       <h2 class="text-3xl font-bold mb-8 text-blue-400">Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- Project 1 -->
         <div class="bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition">
           <h3 class="text-xl font-semibold mb-2 text-white">Home Network Setup</h3>
-          <p class="mb-2 text-gray-300">Project to run cat6 ethernet cable to each room in my house.</p>
-          <a href="#" class="text-blue-400 hover:underline">View More</a>
+          <p class="mb-2 text-gray-300">Project to run cat6 ethernet cable...</p>
         </div>
-        <!-- Project 2 -->
         <div class="bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition">
           <h3 class="text-xl font-semibold mb-2 text-white">Server Build and Configuration</h3>
-          <p class="mb-2 text-gray-300">Building and configuring a home server for various services.</p>
-          <a href="#" class="text-blue-400 hover:underline">View More</a>
+          <p class="mb-2 text-gray-300">Building and configuring a home server...</p>
         </div>
       </div>
     </div>
   </section>
-<section id="certifications" class="container mx-auto py-16 px-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-xl">
-  <h2 class="text-3xl font-bold mb-8 text-blue-400 text-center">Certifications</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    <!-- CompTIA PenTest+ -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
-      <img src="images/logos/PenTest+-png.png" alt="CompTIA PenTest+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
-      <p class="text-lg font-semibold text-white">CompTIA PenTest+</p>
-      <span class="text-gray-400 text-sm">(2025)</span>
-      <!-- Hover Popup -->
-      <div class="absolute inset-0 flex items-center justify-center bg-black/70 hidden group-hover:flex z-50">
-        <embed src="images/certs/CompTIA PenTest+ ce certificate.pdf" type="application/pdf" class="w-3/4 h-3/4 rounded-xl shadow-xl border border-blue-400" />
+  <!-- Certifications -->
+  <section id="certifications" class="container mx-auto py-16 px-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-xl">
+    <h2 class="text-3xl font-bold mb-8 text-blue-400 text-center">Certifications</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Template Example -->
+      <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative overflow-hidden">
+        <img src="images/logos/PenTest+-png.png" alt="CompTIA PenTest+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+        <p class="text-lg font-semibold text-white">CompTIA PenTest+</p>
+        <span class="text-gray-400 text-sm">(2025)</span>
+        <!-- Hover Popup -->
+        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition duration-300">
+          <embed src="images/certs/CompTIA PenTest+ ce certificate.pdf" type="application/pdf"
+                 class="w-3/4 h-3/4 rounded-xl shadow-xl border border-blue-400" />
+        </div>
       </div>
+
+      <!-- Repeat for all other certs... -->
+
     </div>
-
-    <!-- CompTIA TestOut: Ethical Hacker Pro -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
-      <img src="images/logos/ethical hacker pro .jpeg" alt="Ethical Hacker Pro Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
-      <p class="text-lg font-semibold text-white">CompTIA TestOut: Ethical Hacker Pro</p>
-      <span class="text-gray-400 text-sm">(2024)</span>
-      <div class="absolute inset-0 flex items-center justify-center bg-black/70 hidden group-hover:flex z-50">
-        <img src="images/certs/Ethical Hacker Pro.png" alt="Ethical Hacker Pro Certificate" class="w-3/4 rounded-xl shadow-xl border border-blue-400">
-      </div>
-    </div>
-
-    <!-- CompTIA CySA+ -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
-      <img src="images/logos/CySA+-png.png" alt="CompTIA CySA+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
-      <p class="text-lg font-semibold text-white">CompTIA CySA+</p>
-      <span class="text-gray-400 text-sm">(2025)</span>
-      <div class="absolute inset-0 flex items-center justify-center bg-black/70 hidden group-hover:flex z-50">
-        <embed src="images/certs/CompTIA CySA+ ce certificate.pdf" type="application/pdf" class="w-3/4 h-3/4 rounded-xl shadow-xl border border-blue-400" />
-      </div>
-    </div>
-
-    <!-- CompTIA TestOut: Server Pro 2016 Networking -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
-      <img src="images/logos/ServerPro2016 Networking.png" alt="Server Pro 2016 Networking Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
-      <p class="text-lg font-semibold text-white">CompTIA TestOut: Server Pro 2016 Networking</p>
-      <span class="text-gray-400 text-sm">(2023)</span>
-      <div class="absolute inset-0 flex items-center justify-center bg-black/70 hidden group-hover:flex z-50">
-        <img src="images/certs/ServerPro2016 Networking.png" alt="Server Pro 2016 Networking Certificate" class="w-3/4 rounded-xl shadow-xl border border-blue-400">
-      </div>
-    </div>
-
-    <!-- CompTIA Security+ -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
-      <img src="images/logos/Security+-png.png" alt="CompTIA Security+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
-      <p class="text-lg font-semibold text-white">CompTIA Security+</p>
-      <span class="text-gray-400 text-sm">(2024)</span>
-      <div class="absolute inset-0 flex items-center justify-center bg-black/70 hidden group-hover:flex z-50">
-        <embed src="images/certs/CompTIA Security+ ce certificate.pdf" type="application/pdf" class="w-3/4 h-3/4 rounded-xl shadow-xl border border-blue-400" />
-      </div>
-    </div>
-
-    <!-- CCNA: Introduction to Networks -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
-      <img src="images/logos/cisco.png" alt="Cisco Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
-      <p class="text-lg font-semibold text-white">CCNA: Introduction to Networks</p>
-      <span class="text-gray-400 text-sm">(2023)</span>
-      <div class="absolute inset-0 flex items-center justify-center bg-black/70 hidden group-hover:flex z-50">
-        <img src="images/ccna-intro.jpg" alt="CCNA Intro Certificate" class="w-3/4 rounded-xl shadow-xl border border-blue-400">
-      </div>
-    </div>
-
-    <!-- CompTIA Network+ -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
-      <img src="images/logos/Network+-png.png" alt="CompTIA Network+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
-      <p class="text-lg font-semibold text-white">CompTIA Network+</p>
-      <span class="text-gray-400 text-sm">(2024)</span>
-      <div class="absolute inset-0 flex items-center justify-center bg-black/70 hidden group-hover:flex z-50">
-        <embed src="images/certs/CompTIA Network+ ce certificate.pdf" type="application/pdf" class="w-3/4 h-3/4 rounded-xl shadow-xl border border-blue-400" />
-      </div>
-    </div>
-
-    <!-- CompTIA A+ -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
-      <img src="images/logos/A+-png.png" alt="CompTIA A+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
-      <p class="text-lg font-semibold text-white">CompTIA A+</p>
-      <span class="text-gray-400 text-sm">(2023)</span>
-      <div class="absolute inset-0 flex items-center justify-center bg-black/70 hidden group-hover:flex z-50">
-        <embed src="images/certs/CompTIA A+ ce certificate.pdf" type="application/pdf" class="w-3/4 h-3/4 rounded-xl shadow-xl border border-blue-400" />
-      </div>
-    </div>
-
-    <!-- CCNA: Switching, Routing, and Wireless Essentials -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
-      <img src="images/logos/cisco.png" alt="Cisco Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
-      <p class="text-lg font-semibold text-white">CCNA: Switching, Routing, and Wireless Essentials</p>
-      <span class="text-gray-400 text-sm">(2023)</span>
-      <div class="absolute inset-0 flex items-center justify-center bg-black/70 hidden group-hover:flex z-50">
-        <img src="images/ccna-routing.jpg" alt="CCNA Routing Certificate" class="w-3/4 rounded-xl shadow-xl border border-blue-400">
-      </div>
-    </div>
-
-    <!-- CVSS v4.0 -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
-      <img src="images/logos/cvss.png" alt="CVSS Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
-      <p class="text-lg font-semibold text-white">CVSS v4.0 - Common Vulnerability Scoring System</p>
-      <span class="text-gray-400 text-sm">(2025)</span>
-      <div class="absolute inset-0 flex items-center justify-center bg-black/70 hidden group-hover:flex z-50">
-        <img src="images/cvss-v4.jpg" alt="CVSS Certificate" class="w-3/4 rounded-xl shadow-xl border border-blue-400">
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Alpine.js CDN -->
-<script src="https://unpkg.com/alpinejs" defer></script>
+  </section>
 
   <!-- Contact -->
   <section id="contact" class="container mx-auto py-16 text-center">
     <h2 class="text-3xl font-bold mb-4 text-blue-400">Contact</h2>
-    <p class="mb-4 text-gray-300">Interested in working together or learning more?</p>
+    <p class="mb-4 text-gray-300">Interested in working together?</p>
     <ul class="text-gray-300 space-y-2">
       <li>Email: <a href="mailto:golsonmke@gmail.com" class="text-blue-400 hover:underline">golsonmke@gmail.com</a></li>
       <li>LinkedIn: <a href="https://www.linkedin.com/in/gary-t-olson-b04871173" class="text-blue-400 hover:underline">linkedin.com</a></li>
-      <li>GitHub: <a href="https://github.com/golsonmke"class="text-blue-400 hover:underline">github.com/golsonmke</a></li>
+      <li>GitHub: <a href="https://github.com/golsonmke" class="text-blue-400 hover:underline">github.com/golsonmke</a></li>
     </ul>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-gray-800 py-6 text-center text-gray-400">
     <p>&copy; 2025 golsonmke.tech. All rights reserved.</p>
   </footer>

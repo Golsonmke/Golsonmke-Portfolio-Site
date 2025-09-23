@@ -104,10 +104,12 @@
         My journey in cybersecurity began with self-study and hands-on labs, and I'm continuously expanding my skills through various projects and certifications.
       </p>
       <!-- Resume Button -->
+      <!--
       <a href="Gary Olson Resume v5.pdf" download="Gary_Olson_Resume.pdf"
          class="inline-block bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:from-blue-600 hover:to-blue-800 hover:shadow-blue-500/50 transition transform hover:scale-105">
          📄 Download Resume
       </a>
+      -->
     </div>
 
   </div>
@@ -136,90 +138,110 @@
   </section>
 <section id="certifications" class="container mx-auto py-16 px-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-xl">
   <h2 class="text-3xl font-bold mb-8 text-blue-400 text-center">Certifications</h2>
-
-  <!-- Certifications Grid -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    
+    <!-- Example for each cert/logo in images folder -->
     <!-- CompTIA PenTest+ -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
       <img src="images/logos/PenTest+-png.png" alt="CompTIA PenTest+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA PenTest+</p>
       <span class="text-gray-400 text-sm">(2025)</span>
-      <a href="images/certs/CompTIA PenTest+ ce certificate.pdf" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+      <!-- Popup Certificate -->
+      <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 hidden group-hover:block">
+        <img src="images/certs/CompTIA PenTest+ ce certificate.pdf" alt="PenTest+ Certificate" class="max-w-xs rounded-lg shadow-lg border border-blue-400 bg-gray-900">
+      </div>
+      <span class="block mt-2 text-blue-400 cursor-pointer">View Certificate</span>
     </div>
-
     <!-- CompTIA TestOut: Ethical Hacker Pro -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
-      <img src="images/logos/ethical hacker pro .jpeg" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
+      <img src="images/logos/ethical hacker pro .jpeg" alt="Ethical Hacker Pro Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA TestOut: Ethical Hacker Pro</p>
       <span class="text-gray-400 text-sm">(2024)</span>
-      <a href="images/certs/Ethical Hacker Pro.png" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+      <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 hidden group-hover:block">
+        <img src="images/certs/Ethical Hacker Pro.png" alt="Ethical Hacker Pro Certificate" class="max-w-xs rounded-lg shadow-lg border border-blue-400 bg-gray-900">
+      </div>
+      <span class="block mt-2 text-blue-400 cursor-pointer">View Certificate</span>
     </div>
-
     <!-- CompTIA CySA+ -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
-      <img src="images/logos/CySA+-png.png" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
+      <img src="images/logos/CySA+-png.png" alt="CompTIA CySA+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA CySA+</p>
       <span class="text-gray-400 text-sm">(2025)</span>
-      <a href="images/certs/CompTIA CySA+ ce certificate.pdf" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+      <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 hidden group-hover:block">
+        <img src="images/certs/CompTIA CySA+ ce certificate.pdf" alt="CySA+ Certificate" class="max-w-xs rounded-lg shadow-lg border border-blue-400 bg-gray-900">
+      </div>
+      <span class="block mt-2 text-blue-400 cursor-pointer">View Certificate</span>
     </div>
-
     <!-- CompTIA TestOut: Server Pro 2016 Networking -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
       <img src="images/logos/ServerPro2016 Networking.png" alt="Server Pro 2016 Networking Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA TestOut: Server Pro 2016 Networking</p>
       <span class="text-gray-400 text-sm">(2023)</span>
-      <a href="images/certs/ServerPro2016 Networking.png" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+      <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 hidden group-hover:block">
+        <img src="images/certs/ServerPro2016 Networking.png" alt="Server Pro 2016 Networking Certificate" class="max-w-xs rounded-lg shadow-lg border border-blue-400 bg-gray-900">
+      </div>
+      <span class="block mt-2 text-blue-400 cursor-pointer">View Certificate</span>
     </div>
-
     <!-- CompTIA Security+ -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
-      <img src="images/logos/Security+-png.png" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
+      <img src="images/logos/Security+-png.png" alt="CompTIA Security+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA Security+</p>
       <span class="text-gray-400 text-sm">(2024)</span>
-      <a href="images/certs/CompTIA Security+ ce certificate.pdf" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+      <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 hidden group-hover:block">
+        <img src="images/certs/CompTIA Security+ ce certificate.pdf" alt="Security+ Certificate" class="max-w-xs rounded-lg shadow-lg border border-blue-400 bg-gray-900">
+      </div>
+      <span class="block mt-2 text-blue-400 cursor-pointer">View Certificate</span>
     </div>
-
     <!-- CCNA: Introduction to Networks -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
       <img src="images/logos/cisco.png" alt="Cisco Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CCNA: Introduction to Networks</p>
       <span class="text-gray-400 text-sm">(2023)</span>
-      <a href="images/ccna-intro.jpg" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+      <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 hidden group-hover:block">
+        <img src="images/ccna-intro.jpg" alt="CCNA Intro Certificate" class="max-w-xs rounded-lg shadow-lg border border-blue-400 bg-gray-900">
+      </div>
+      <span class="block mt-2 text-blue-400 cursor-pointer">View Certificate</span>
     </div>
-
     <!-- CompTIA Network+ -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
-      <img src="images/logos/Network+-png.png" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
+      <img src="images/logos/Network+-png.png" alt="CompTIA Network+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA Network+</p>
       <span class="text-gray-400 text-sm">(2024)</span>
-      <a href="images/certs/CompTIA Network+ ce certificate.pdf" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+      <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 hidden group-hover:block">
+        <img src="images/certs/CompTIA Network+ ce certificate.pdf" alt="Network+ Certificate" class="max-w-xs rounded-lg shadow-lg border border-blue-400 bg-gray-900">
+      </div>
+      <span class="block mt-2 text-blue-400 cursor-pointer">View Certificate</span>
     </div>
-
     <!-- CompTIA A+ -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
-      <img src="images/logos/A+-png.png" alt="CompTIA Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
+      <img src="images/logos/A+-png.png" alt="CompTIA A+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CompTIA A+</p>
       <span class="text-gray-400 text-sm">(2023)</span>
-      <a href="images/certs/CompTIA A+ ce certificate.pdf" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+      <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 hidden group-hover:block">
+        <img src="images/certs/CompTIA A+ ce certificate.pdf" alt="A+ Certificate" class="max-w-xs rounded-lg shadow-lg border border-blue-400 bg-gray-900">
+      </div>
+      <span class="block mt-2 text-blue-400 cursor-pointer">View Certificate</span>
     </div>
-
     <!-- CCNA: Switching, Routing, and Wireless Essentials -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
       <img src="images/logos/cisco.png" alt="Cisco Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CCNA: Switching, Routing, and Wireless Essentials</p>
       <span class="text-gray-400 text-sm">(2023)</span>
-      <a href="images/ccna-routing.jpg" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+      <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 hidden group-hover:block">
+        <img src="images/ccna-routing.jpg" alt="CCNA Routing Certificate" class="max-w-xs rounded-lg shadow-lg border border-blue-400 bg-gray-900">
+      </div>
+      <span class="block mt-2 text-blue-400 cursor-pointer">View Certificate</span>
     </div>
-
     <!-- CVSS v4.0 -->
-    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center">
+    <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative">
       <img src="images/logos/cvss.png" alt="CVSS Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
       <p class="text-lg font-semibold text-white">CVSS v4.0 - Common Vulnerability Scoring System</p>
       <span class="text-gray-400 text-sm">(2025)</span>
-      <a href="images/cvss-v4.jpg" target="_blank" class="block mt-2 text-blue-400 hover:underline">View Certificate</a>
+      <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 hidden group-hover:block">
+        <img src="images/cvss-v4.jpg" alt="CVSS Certificate" class="max-w-xs rounded-lg shadow-lg border border-blue-400 bg-gray-900">
+      </div>
+      <span class="block mt-2 text-blue-400 cursor-pointer">View Certificate</span>
     </div>
-
+    <!-- Add more certs/logos here as needed, following the same pattern -->
   </div>
 </section>
 

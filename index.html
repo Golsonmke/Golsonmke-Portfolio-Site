@@ -3,44 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>golsonmke.tech - Portfolio </title>
+  <title>golsonmke.tech - Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <!-- Alpine.js for mobile nav -->
   <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
 <body class="bg-gray-900 text-gray-200 font-sans">
 
-  <!-- Header with Responsive Nav -->
+  <!-- Header -->
   <header class="bg-gray-800 shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center p-5">
       <h1 class="text-xl font-bold text-white">Gary Thomas Olson</h1>
       <nav class="hidden md:flex space-x-6">
-        <a href="#about" class="hover:text-blue-400 text-white">About</a>
-        <a href="#projects" class="hover:text-blue-400 text-white">Projects</a>
-        <a href="#certifications" class="hover:text-blue-400 text-white">Certifications</a>
-        <a href="#contact" class="hover:text-blue-400 text-white">Contact</a>
+        <a href="#about" class="hover:text-blue-400">About</a>
+        <a href="#projects" class="hover:text-blue-400">Projects</a>
+        <a href="#certifications" class="hover:text-blue-400">Certifications</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
       </nav>
-
-      <!-- Mobile Menu -->
+      <!-- Mobile Nav -->
       <div x-data="{ open: false }" class="md:hidden">
-        <button @click="open = true" class="text-white focus:outline-none">
+        <button @click="open = true" class="text-white">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-
         <div class="fixed inset-0 bg-black bg-opacity-50 z-40" x-show="open" x-transition.opacity @click="open = false"></div>
-
         <div class="fixed top-0 right-0 w-64 h-full bg-gray-900 shadow-lg z-50 transform transition-transform duration-300"
              :class="open ? 'translate-x-0' : 'translate-x-full'">
           <div class="flex justify-end p-4">
             <button @click="open = false" class="text-white text-2xl">✕</button>
           </div>
           <nav class="flex flex-col space-y-4 px-6">
-            <a href="#about" class="hover:text-blue-400" @click="open = false">About</a>
-            <a href="#projects" class="hover:text-blue-400" @click="open = false">Projects</a>
-            <a href="#certifications" class="hover:text-blue-400" @click="open = false">Certifications</a>
-            <a href="#contact" class="hover:text-blue-400" @click="open = false">Contact</a>
+            <a href="#about" @click="open = false" class="hover:text-blue-400">About</a>
+            <a href="#projects" @click="open = false" class="hover:text-blue-400">Projects</a>
+            <a href="#certifications" @click="open = false" class="hover:text-blue-400">Certifications</a>
+            <a href="#contact" @click="open = false" class="hover:text-blue-400">Contact</a>
           </nav>
         </div>
       </div>
@@ -52,11 +49,11 @@
     <div class="flex flex-col md:flex-row items-center gap-8">
       <div class="flex-shrink-0 md:w-1/3 flex justify-center">
         <img src="1757612435631.jpeg" alt="Gary T. Olson"
-             class="rounded-2xl shadow-lg w-64 h-auto object-cover border-4 border-blue-500 transition duration-300 hover:shadow-blue-500/60 hover:scale-105" />
+             class="rounded-2xl shadow-lg w-64 h-auto object-cover border-4 border-blue-500 transition hover:shadow-blue-500/60 hover:scale-105" />
       </div>
       <div class="md:w-2/3 text-center md:text-left">
         <h2 class="text-3xl font-bold mb-4 text-blue-400">About Me</h2>
-        <p class="text-lg leading-relaxed text-gray-300 max-w-2xl mb-6">
+        <p class="text-lg leading-relaxed text-gray-300 max-w-2xl">
           Hello! I'm Gary T. Olson, a cybersecurity enthusiast and aspiring penetration tester...
         </p>
       </div>
@@ -70,11 +67,11 @@
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition">
           <h3 class="text-xl font-semibold mb-2 text-white">Home Network Setup</h3>
-          <p class="mb-2 text-gray-300">Project to run cat6 ethernet cable...</p>
+          <p class="text-gray-300">Ran Cat6 ethernet cable to each room in my house.</p>
         </div>
         <div class="bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition">
           <h3 class="text-xl font-semibold mb-2 text-white">Server Build and Configuration</h3>
-          <p class="mb-2 text-gray-300">Building and configuring a home server...</p>
+          <p class="text-gray-300">Built and configured a home server for multiple services.</p>
         </div>
       </div>
     </div>
@@ -85,19 +82,105 @@
     <h2 class="text-3xl font-bold mb-8 text-blue-400 text-center">Certifications</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- Template Example -->
+      <!-- Template -->
       <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative overflow-hidden">
         <img src="images/logos/PenTest+-png.png" alt="CompTIA PenTest+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
         <p class="text-lg font-semibold text-white">CompTIA PenTest+</p>
         <span class="text-gray-400 text-sm">(2025)</span>
-        <!-- Hover Popup -->
-        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition duration-300">
-          <embed src="images/certs/CompTIA PenTest+ ce certificate.pdf" type="application/pdf"
-                 class="w-3/4 h-3/4 rounded-xl shadow-xl border border-blue-400" />
+        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition">
+          <embed src="images/certs/CompTIA PenTest+ ce certificate.pdf" type="application/pdf" class="w-3/4 h-3/4 rounded-xl shadow-xl border border-blue-400"/>
         </div>
       </div>
 
-      <!-- Repeat for all other certs... -->
+      <!-- Ethical Hacker Pro -->
+      <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative overflow-hidden">
+        <img src="images/logos/ethical hacker pro .jpeg" alt="Ethical Hacker Pro Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+        <p class="text-lg font-semibold text-white">CompTIA TestOut: Ethical Hacker Pro</p>
+        <span class="text-gray-400 text-sm">(2024)</span>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition">
+          <img src="images/certs/Ethical Hacker Pro.png" alt="Ethical Hacker Pro Certificate" class="w-3/4 rounded-xl shadow-xl border border-blue-400"/>
+        </div>
+      </div>
+
+      <!-- CySA+ -->
+      <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative overflow-hidden">
+        <img src="images/logos/CySA+-png.png" alt="CompTIA CySA+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+        <p class="text-lg font-semibold text-white">CompTIA CySA+</p>
+        <span class="text-gray-400 text-sm">(2025)</span>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition">
+          <embed src="images/certs/CompTIA CySA+ ce certificate.pdf" type="application/pdf" class="w-3/4 h-3/4 rounded-xl shadow-xl border border-blue-400"/>
+        </div>
+      </div>
+
+      <!-- Server Pro -->
+      <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative overflow-hidden">
+        <img src="images/logos/ServerPro2016 Networking.png" alt="Server Pro 2016 Networking Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+        <p class="text-lg font-semibold text-white">CompTIA TestOut: Server Pro 2016 Networking</p>
+        <span class="text-gray-400 text-sm">(2023)</span>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition">
+          <img src="images/certs/ServerPro2016 Networking.png" alt="Server Pro Certificate" class="w-3/4 rounded-xl shadow-xl border border-blue-400"/>
+        </div>
+      </div>
+
+      <!-- Security+ -->
+      <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative overflow-hidden">
+        <img src="images/logos/Security+-png.png" alt="CompTIA Security+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+        <p class="text-lg font-semibold text-white">CompTIA Security+</p>
+        <span class="text-gray-400 text-sm">(2024)</span>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition">
+          <embed src="images/certs/CompTIA Security+ ce certificate.pdf" type="application/pdf" class="w-3/4 h-3/4 rounded-xl border border-blue-400"/>
+        </div>
+      </div>
+
+      <!-- CCNA Intro -->
+      <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative overflow-hidden">
+        <img src="images/logos/cisco.png" alt="Cisco Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+        <p class="text-lg font-semibold text-white">CCNA: Introduction to Networks</p>
+        <span class="text-gray-400 text-sm">(2023)</span>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition">
+          <img src="images/ccna-intro.jpg" alt="CCNA Intro Certificate" class="w-3/4 rounded-xl shadow-xl border border-blue-400"/>
+        </div>
+      </div>
+
+      <!-- Network+ -->
+      <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative overflow-hidden">
+        <img src="images/logos/Network+-png.png" alt="CompTIA Network+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+        <p class="text-lg font-semibold text-white">CompTIA Network+</p>
+        <span class="text-gray-400 text-sm">(2024)</span>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition">
+          <embed src="images/certs/CompTIA Network+ ce certificate.pdf" type="application/pdf" class="w-3/4 h-3/4 rounded-xl shadow-xl border border-blue-400"/>
+        </div>
+      </div>
+
+      <!-- A+ -->
+      <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative overflow-hidden">
+        <img src="images/logos/A+-png.png" alt="CompTIA A+ Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+        <p class="text-lg font-semibold text-white">CompTIA A+</p>
+        <span class="text-gray-400 text-sm">(2023)</span>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition">
+          <embed src="images/certs/CompTIA A+ ce certificate.pdf" type="application/pdf" class="w-3/4 h-3/4 rounded-xl shadow-xl border border-blue-400"/>
+        </div>
+      </div>
+
+      <!-- CCNA Routing -->
+      <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative overflow-hidden">
+        <img src="images/logos/cisco.png" alt="Cisco Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+        <p class="text-lg font-semibold text-white">CCNA: Switching, Routing, and Wireless Essentials</p>
+        <span class="text-gray-400 text-sm">(2023)</span>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition">
+          <img src="images/ccna-routing.jpg" alt="CCNA Routing Certificate" class="w-3/4 rounded-xl shadow-xl border border-blue-400"/>
+        </div>
+      </div>
+
+      <!-- CVSS -->
+      <div class="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-blue-500/50 transition transform hover:scale-105 text-center group relative overflow-hidden">
+        <img src="images/logos/cvss.png" alt="CVSS Logo" class="mx-auto mb-3 w-16 h-16 object-contain">
+        <p class="text-lg font-semibold text-white">CVSS v4.0 - Common Vulnerability Scoring System</p>
+        <span class="text-gray-400 text-sm">(2025)</span>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition">
+          <img src="images/cvss-v4.jpg" alt="CVSS Certificate" class="w-3/4 rounded-xl shadow-xl border border-blue-400"/>
+        </div>
+      </div>
 
     </div>
   </section>

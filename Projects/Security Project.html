@@ -1,0 +1,95 @@
+<<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Featured Project — Enhanced Security with Azure Sentinel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 antialiased">
+  <main class="max-w-5xl mx-auto p-6 lg:p-12 space-y-10">
+    <!-- Header -->
+    <header class="text-center">
+      <h1 class="text-3xl sm:text-4xl font-extrabold">Featured Project</h1>
+      <p class="mt-2 text-xl text-blue-400 font-semibold">Enhanced Information Security with Microsoft Azure Sentinel</p>
+    </header>
+
+    <!-- Overview -->
+    <section class="bg-gray-800 rounded-xl p-6 shadow-md">
+      <h2 class="text-2xl font-bold mb-3">Overview</h2>
+      <p class="text-slate-300 leading-relaxed">This project demonstrates how I used <span class="font-semibold text-blue-400">Microsoft Azure Sentinel (SIEM)</span> with a <span class="font-semibold text-blue-400">Windows VM honeypot</span> and an <span class="font-semibold text-blue-400">Apache2 web server</span> to collect, analyze, and visualize real-world cyberattack data. The honeypot was intentionally exposed to the internet to attract attacks, and Sentinel was used to ingest logs, enrich them with geolocation data, and display the results on a world map.</p>
+    </section>
+
+    <!-- Objectives -->
+    <section class="bg-gray-800 rounded-xl p-6 shadow-md">
+      <h2 class="text-2xl font-bold mb-3">Objectives</h2>
+      <ul class="list-disc list-inside space-y-2 text-slate-300">
+        <li>Gain hands-on experience with Azure Sentinel, a leading SIEM tool</li>
+        <li>Deploy a vulnerable VM honeypot to attract attacks</li>
+        <li>Collect and analyze logs of failed RDP login attempts</li>
+        <li>Enrich log data with IP geolocation information using PowerShell and an API</li>
+        <li>Visualize attacker origins and trends on an interactive map in Sentinel</li>
+      </ul>
+    </section>
+
+    <!-- Implementation -->
+    <section class="bg-gray-800 rounded-xl p-6 shadow-md">
+      <h2 class="text-2xl font-bold mb-3">Implementation</h2>
+      <ol class="list-decimal list-inside space-y-4 text-slate-300">
+        <li>
+          <span class="font-semibold text-white">Azure Setup:</span> Created an Azure account, deployed a Windows VM honeypot (RDP exposed, firewall disabled), and configured inbound rules to allow global traffic.
+        </li>
+        <li>
+          <span class="font-semibold text-white">Log Collection & Analysis:</span> Configured a Log Analytics Workspace (LAW), built a PowerShell script to extract Event ID 4625 (failed RDP logins), and integrated the IP Geolocation API.
+        </li>
+        <li>
+          <span class="font-semibold text-white">Visualization:</span> Used Sentinel’s dashboard to map global attack sources, observing brute-force login attempts from multiple countries.
+        </li>
+        <li>
+          <span class="font-semibold text-white">Additional Testing:</span> Deployed an Ubuntu VM with Apache2, tested open ports with nmap, and ran nikto scans for vulnerabilities.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Results -->
+    <section class="bg-gray-800 rounded-xl p-6 shadow-md">
+      <h2 class="text-2xl font-bold mb-3">Results & Insights</h2>
+      <ul class="list-disc list-inside space-y-2 text-slate-300">
+        <li>Captured real-world global brute-force RDP attacks within hours of exposure</li>
+        <li>Visualized threat origins geographically in Azure Sentinel</li>
+        <li>Demonstrated how quickly attackers find open services on the internet</li>
+        <li>Strengthened skills in SIEM setup, log analysis, and SOC-style workflows</li>
+      </ul>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="bg-gray-800 rounded-xl p-6 shadow-md">
+      <h2 class="text-2xl font-bold mb-3">Conclusion</h2>
+      <p class="text-slate-300 leading-relaxed">This project reinforced my skills in <span class="text-blue-400 font-semibold">cloud security, SIEM configuration, log analysis, and threat visualization</span>. It highlighted the importance of proactive monitoring and how quickly unprotected systems are targeted in the wild. Future improvements include refining detection rules and expanding threat intelligence enrichment for more advanced use cases.</p>
+    </section>
+
+    <!-- Placeholder for Screenshots -->
+    <section class="bg-gray-800 rounded-xl p-6 shadow-md text-center">
+      <h2 class="text-2xl font-bold mb-3">Screenshots</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-gray-700 aspect-video flex items-center justify-center rounded-lg">
+          <span class="text-slate-400">images/Projects Pics/logs ex.png</span>
+        </div>
+        <div class="bg-gray-700 aspect-video flex items-center justify-center rounded-lg">
+          <span class="text-slate-400">images/Projects Pics/Failed rdp.png</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-6 space-y-4">
+      <p class="text-slate-400 text-center">Interested in the technical details? Let’s connect and talk security.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:golsonmke@gmail.com" class="px-6 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-medium text-center">Contact Me</a>
+        <a href="/index.html" class="px-6 py-2 rounded-lg bg-gray-600 hover:bg-gray-500 text-white font-medium text-center">← Back to Portfolio</a>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
